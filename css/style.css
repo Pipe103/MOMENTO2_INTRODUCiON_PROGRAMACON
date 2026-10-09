@@ -1,0 +1,442 @@
+/* Definición de variables corporativas basadas en la paleta solicitada */
+:root {
+    --color-principal: #0D0D0D;
+    --color-secundario: #404040;
+    --color-gris-medio: #737373;
+    --color-gris-claro: #BFBFBF;
+    --color-fondo: #F2F2F2;
+    --color-blanco: #ffffff;
+    --color-texto: #0D0D0D;
+}
+
+/* Estilos generales del documento */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Oswald, Helvetica, Arial, sans-serif;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 1. HEADER */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo-imagen {
+    width: 50px;       /* Ancho fijo para que no sea muy grande (puedes cambiarlo a 40px o 60px según prefieras) */
+    height: auto;      /* Mantiene la proporción original de la imagen */
+    border-radius: 50%; /* Opcional: si quieres que el logo sea circular (si es redondo) */
+    object-fit: cover;
+}
+
+.encabezado h2 {
+    color: var(--color-blanco);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-gris-claro);
+}
+
+/* 2. HERO */
+.hero {
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+    border-bottom: 2px solid var(--color-gris-claro);
+}
+
+.hero-contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.eslogan {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+}
+
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-secundario);
+}
+
+/* 3. SECCIÓN NOSOTROS */
+.nosotros {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+}
+
+.nosotros-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.nosotros-imagen, .nosotros-texto {
+    flex: 1;
+}
+
+/* 4. PRODUCTOS O SERVICIOS */
+.servicios {
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+    text-align: center;
+}
+
+.servicios h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.servicios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-servicio {
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-servicio img {
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    margin: 10px 0;
+}
+
+.btn-tarjeta {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-tarjeta:hover {
+    background-color: var(--color-secundario);
+}
+
+/* 5. BENEFICIOS */
+.beneficios {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.beneficios h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.beneficios-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.beneficio-item {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* 6. TABLA */
+.seccion-tabla {
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+    text-align: center;
+}
+
+.seccion-tabla h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.tabla-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-fondo);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-gris-claro);
+}
+
+th {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font-family: Oswald, Helvetica, Arial, sans-serif;
+}
+
+tr:hover {
+    background-color: var(--color-gris-claro);
+}
+
+/* 7. GALERÍA */
+.galeria {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.galeria h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.galeria-contenedor img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.galeria-contenedor img:hover {
+    transform: scale(1.03);
+}
+
+/* 8. FORMULARIO DE CONTACTO */
+.contacto {
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+    text-align: center;
+}
+
+.contacto h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    background-color: var(--color-fondo);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.formulario label {
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    padding: 10px;
+    border: 1px solid var(--color-gris-claro);
+    border-radius: 5px;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulario button {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* 9. FOOTER */
+.pie-pagina {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-contenido h3 {
+    color: var(--color-blanco);
+    margin: 0;
+}
+
+.eslogan-footer {
+    font-style: italic;
+    color: var(--color-gris-claro);
+}
+
+.derechos {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--color-gris-claro);
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-contenido,
+    .nosotros-contenedor {
+        flex-direction: column;
+    }
+
+    .tarjeta-servicio {
+        width: 100%;
+    }
+
+    .galeria-contenedor img {
+        width: 100%;
+        height: auto;
+    }
+}
